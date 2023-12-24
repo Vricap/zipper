@@ -21,7 +21,7 @@ If you don't specify a destination path; your current directory will be the dest
 #### EXAMPLE
 
 ```
-$ zipper -z -fl [./task1.pdf ./task2.pdf] ./homework
+$ zipper -z -fl [task1.pdf task2.pdf] homework
 ```
 
 ### UNZIPPING
@@ -38,5 +38,5 @@ Again, if you don't specify a destination path; your current directory will be t
 #### EXAMPLE
 
 ```
-$ zipper -u ./homework.zip ./homework-done
+$ zipper -u homework.zip homework-done
 ```
