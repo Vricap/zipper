@@ -48,10 +48,13 @@ Available flag type:
 					}
 					str = strings.ReplaceAll(strings.ReplaceAll(os.Args[i], "[", ""), "]", "")
 					files = append(files, str)
+					if os.Args[i] != os.Args[len(os.Args) - 1] {
+						zipFileName = os.Args[len(os.Args) - 1]
+					}
 				} else {
 					files = append(files, os.Args[3])
 				}
-				if os.Args[len(os.Args) - 1] != os.Args[3] {
+				if len(os.Args) == 5 && !strings.Contains(os.Args[len(os.Args) - 1], "]"){
 					zipFileName = os.Args[len(os.Args) - 1]
 				}
 				doZipFile(zipFileName, files)
